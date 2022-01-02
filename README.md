@@ -11,7 +11,7 @@ __How to run the bot?__
 >
 > **npm i discord-together**
 
-Paste your token and thats it enjoy the activities.
+• Paste your token and thats it enjoy the activities.
 
 > [Discord Support Server](https://discord.gg/FdAPpZXpJF)
 > 
