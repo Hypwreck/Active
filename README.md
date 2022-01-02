@@ -13,6 +13,8 @@ __How to run the bot?__
 
 • Paste your token and thats it enjoy the activities.
 
+# Support
+
 > [Discord Support Server](https://discord.gg/FdAPpZXpJF)
 > 
 > [Youtube Channel](https://www.youtube.com/channel/UCxLLUfZ-CXEgsJpZOe8pSPA)
