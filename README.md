@@ -13,7 +13,7 @@ __How to run the bot?__
 
 You need [Node.jsv16+](https://nodejs.org/en/) for running this bot.
 
-> **npm i discord.js**
+> **npm i discord.js** //v13
 >
 > **npm i discord-together**
 
