@@ -3,7 +3,7 @@ An Advanced Activity Bot Using Discord-Together Package For **Discord.jsv13** wi
 
 __How to run the bot?__
 
-Copy the code or clone the repository paste it in your coding and then install discord.js package and discord-together package
+• Copy the code or clone the repository paste it in your coding and then install discord.js package and discord-together package
 
 > **npm i discord.js**
 >
