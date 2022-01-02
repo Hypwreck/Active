@@ -1,5 +1,5 @@
 # Activity-Bot-For-Discord.jsv13.
-An Advanced Activity Bot Using Discord-Together Package For **Discord.jsv13** with buttons
+An Advanced Activity Bot Using [Discord-Together](https://www.npmjs.com/package/discord-together) Package For **Discord.jsv13** with buttons
 
 # Usage.
 
