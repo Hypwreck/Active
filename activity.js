@@ -50,7 +50,7 @@ const but12 = new MessageButton().setEmoji("😬").setStyle("SECONDARY").setCust
             
      const collector = message.channel.createMessageComponentCollector({
   
-     time: 100000,
+     time: 100000, //Time after the buttons will stop working.
       });
         collector.on("collect", async (i) => {
             if (i.customId === "youtube") {
