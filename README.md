@@ -11,8 +11,9 @@ __How to run the bot?__
 
 Paste your token and thats it enjoy the activities.
 
-[Discord Support Server](https://discord.gg/FdAPpZXpJF)
-[Youtube Channel](https://www.youtube.com/channel/UCxLLUfZ-CXEgsJpZOe8pSPA)
+> [Discord Support Server](https://discord.gg/FdAPpZXpJF)
+> 
+> [Youtube Channel](https://www.youtube.com/channel/UCxLLUfZ-CXEgsJpZOe8pSPA)
 Here is the Output: 
 
 ![image](https://user-images.githubusercontent.com/89440730/147867829-2f5ba7b6-26ac-45e7-86a6-d3099eb72035.png)
