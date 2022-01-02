@@ -1,6 +1,8 @@
 # Activity-Bot-For-Discord.jsv13
 An Advanced Activity Bot Using Discord-Together Package For **Discord.jsv13** with buttons
 
+#Usage
+
 __How to run the bot?__
 
 • Copy the code or clone the repository paste it in your coding and then install discord.js package and discord-together package
