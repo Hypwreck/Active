@@ -7,4 +7,4 @@ npm i discord.js
 npm i discord-together
 
 Paste your token and thats it enjoy the activityies
-![image](https://user-images.githubusercontent.com/89440730/147867789-893b3df4-41f4-4b29-85e8-7fc2cb48003f.png)
+![image](https://user-images.githubusercontent.com/89440730/147867829-2f5ba7b6-26ac-45e7-86a6-d3099eb72035.png)
