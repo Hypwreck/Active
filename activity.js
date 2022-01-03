@@ -322,8 +322,7 @@ Click the Following button to join in.
    const putt = new MessageActionRow().addComponents(new MessageButton().setEmoji('🎉').setStyle('LINK').setURL(invite11.code))
               i.reply({ embeds: [putemb] ,components: [putt]});
 });   
-
-     else if (i.customId === "awkword") {
+ }  else if (i.customId === "awkword") {
 client.discordTogether.createTogetherCode(message.member.voice.channel.id, 'awkword').then(async invite12 => {
 
 const awkemb = new Discord.MessageEmbed()
