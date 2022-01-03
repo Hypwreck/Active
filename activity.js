@@ -10,11 +10,11 @@ client.discordTogether = new DiscordTogether(client);
 
 //You Can Add VC perm.
 
+
+client.discordTogether = new DiscordTogether(client);
 //Defined The Embed
 const embed = new Discord.MessageEmbed() .setColor("BLURPLE").setAuthor(message.author.tag, message.author.avatarURL()).setThumbnail(message.guild.iconURL()).setDescription(`**Current Prefix:** \`\`.\`\` \n \n> What Are Discord Activities❓ \n\n > __Discord Activities Are The Activities Developed By Discord. Some Of You Might Be Familiar With Discord Activities.__\n\n **ForExample :**\n> \`\`Youtube Together/ Discord Together\`\` Allows You To Play Youtube Videos In A Voice Channel With Your Friends`) .setFooter(`Requested by ${message.author.username}`).setTimestamp()
-
-//Defined The Buttons.
-
+//Defined The Buttons
 const but1 = new MessageButton().setEmoji("926013227513544795").setStyle("SECONDARY").setCustomId("youtube")
 
 const but2 = new MessageButton().setEmoji("♟").setStyle("SECONDARY").setCustomId("chess")
@@ -38,21 +38,31 @@ const but10 = new MessageButton().setEmoji("893608429195780138").setStyle("SECON
 const but11 = new MessageButton().setEmoji("926790157145878559").setStyle("SECONDARY").setCustomId("spellcast")
 
 const but12 = new MessageButton().setEmoji("😬").setStyle("SECONDARY").setCustomId("awkword")
-   
-//End Of Defining Buttons and the start of rows.
 
-     const row = new MessageActionRow().addComponents(but1, but2, but3, but4, but5)
+
+
+        const row = new MessageActionRow().addComponents(but1, but2, but3, but4, but5)
         const row2 = new MessageActionRow().addComponents(but6, but7, but8, but9, but10)
         const row3 = new MessageActionRow().addComponents(but11, but12)
-            message.channel.send({embeds: [embed], components: [row, row2, row3]})
+            const m = await message.channel.send({embeds: [embed], components: [row, row2, row3]})
 
-//Collector For the interactions of the buttons.
             
-     const collector = message.channel.createMessageComponentCollector({
-  
-     time: 100000, //Time after the buttons will stop working.
-      });
-        collector.on("collect", async (i) => {
+    const collector = m.createMessageComponentCollector({
+      filter: (b) => {
+      if(b.user.id === message.author.id) return true;
+       else {
+     b.reply({ ephemeral: true, content: `Only **${message.author.tag}** can use this button, if you want then you've to run the command again.`}); return false;
+           };
+      },
+      time : 60000,
+      idle: 60000/2
+    });
+    collector.on("end", async () => {
+		 if(!m) return;
+        await m.edit({ components: [new MessageActionRow().addComponents(but1.setDisabled(true), but2.setDisabled(true), but3.setDisabled(true), but4.setDisabled(true),  but5.setDisabled(true)), new MessageActionRow().addComponents(but6.setDisabled(true), but7.setDisabled(true), but8.setDisabled(true), but9.setDisabled(true), but10.setDisabled(true)), new MessageActionRow().addComponents(but11.setDisabled(true), but12.setDisabled(true)) ] }).catch(() => {});
+    });
+	 
+    collector.on('collect', async (i) => {
             if (i.customId === "youtube") {
             const youtubeemb = new Discord.MessageEmbed()
 .setAuthor("| YouTube Together")
@@ -71,7 +81,6 @@ Click the Following button to join in.\n
 > **•** __Make Sure that the bot have the__ permission of making an invite.
 > **•** __Enjoy!__
 `) 
-
 client.discordTogether.createTogetherCode(message.member.voice.channel.id, 'youtube').then(async invite1 => {
     const yt = new MessageActionRow().addComponents(new MessageButton().setEmoji('926013227513544795').setStyle('LINK').setURL(invite1.code))
               i.reply({ embeds: [youtubeemb] ,components: [yt]});
@@ -180,7 +189,7 @@ const wordemb = new Discord.MessageEmbed()
 > **Word Snack** is a discord-activity game. You can use this command for playing Word Snack with your friends in the same Voicechannel.\n
 
 > ❓ __Whats Word Snacks__?\n
-> **•** Word Snacks is a Channel Game that we've developed in-house and is available on our official, public Discord Games Lab server. Word Snacks is a multiplayer word search game, where you and your friends try to make as many words as possible from a few letters. The more words you can spell before your opponents, the higher your score!\n
+> **•** Word Snacks is a Channel Game that we've developed in-house and is available on our official, public Discord Games Lab server. Word Snacks is a multiplayer word search game, where you and your friends try to make as many words as possible from a few letters. The more words you can spell before your opponents, the higher your score!\n
 > ❓ __How to join__?\n
 Click the Following button to join in.
 
@@ -266,6 +275,7 @@ Click the Following button to join in.
 
               
 client.discordTogether.createTogetherCode(message.member.voice.channel.id, 'checkers').then(async invite8 => {
+
    const checkers = new MessageActionRow().addComponents(new MessageButton().setEmoji('926740028288294923').setStyle('LINK').setURL(invite8.code))
               i.reply({ embeds: [checkemb] ,components: [checkers]});
 });   }  else if (i.customId === "spellcast") {
@@ -276,7 +286,7 @@ client.discordTogether.createTogetherCode(message.member.voice.channel.id, 'chec
 > **Spell Cast** is a discord-activity game. You can use this command for playing spell cast with your friends in the same Voicechannel.\n
 
 > ❓ __Whats Spell Cast__?\n
-> **•** Spell Cast is a game in which you cast spells. \n❓ __How to join__?\n
+> **•** Spell Cast is a game in which you cast spells. \n❓ __How to join__?\n
 Click the Following button to join in.
 
 > ⚠ **Note:** This command only works on pc/laptop. \n
@@ -311,7 +321,9 @@ Click the Following button to join in.
   
    const putt = new MessageActionRow().addComponents(new MessageButton().setEmoji('🎉').setStyle('LINK').setURL(invite11.code))
               i.reply({ embeds: [putemb] ,components: [putt]});
-});    }  else if (i.customId === "awkword") {
+});   
+
+     else if (i.customId === "awkword") {
 client.discordTogether.createTogetherCode(message.member.voice.channel.id, 'awkword').then(async invite12 => {
 
 const awkemb = new Discord.MessageEmbed()
@@ -336,7 +348,7 @@ Click the Following button to join in.
 });    
 
                 return;
-            } 
+            }
         });
     }
 });
