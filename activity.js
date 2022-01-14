@@ -6,6 +6,8 @@ const { DiscordTogether } = require('discord-together');
 //Command Starts
 client.on('messageCreate', async message => { // 'message' for Discord.js v12
     if (message.content === 'activities') {
+	       const { channel } = message.member.voice;
+        if (!channel ) return message.rep
 client.discordTogether = new DiscordTogether(client);
 
 //You Can Add VC perm.
