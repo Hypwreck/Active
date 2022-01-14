@@ -6,6 +6,22 @@ const client = new Discord.Client({
 const { DiscordTogether } = require('discord-together');
 const config = require('./config.json')
 //Command Starts
+client.on('messageCreate', async message => {
+  if(message.content === `${config.prefix || process.env.prefix}ping`) {
+	const msg = await message.channel.send({content:'Pinging...'});
+		const Embed = new MessageEmbed()
+			.setTitle('Pong!')
+			.setAuthor(`${message.author.username}`, message.author.displayAvatarURL())
+			.setDescription(
+				`⌛ Latency is ${Math.floor(
+					msg.createdTimestamp - message.createdTimestamp,
+				)}ms\n⏲️ API Ping is ${Math.round(client.ws.ping)}`,
+			)
+			.setColor(config.colour);
+		await msg.edit('\u200b');
+		return msg.edit({embeds: [Embed]});
+}
+});
 client.on('messageCreate', async message => { // 'message' for Discord.js v12
     if (message.content === `${config.prefix || process.env.prefix}activities`) {
 	        const { channel } = message.member.voice;
