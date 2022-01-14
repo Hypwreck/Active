@@ -5,7 +5,9 @@ An Advanced Activity Bot Using [Discord-Together](https://www.npmjs.com/package/
 
 __How to run the bot?__
 
-• Copy the code or clone the repository paste it in your coding and then install discord.js package and discord-together package
+• Copy the code or clone/fork the repository paste it in your coding  
+
+• Do `npm install` in your console/shell and install the required npm packages `discord.js@latest` package and `discord-together` package
 
 • Paste your token and thats it enjoy the activities.
 
