@@ -9,6 +9,8 @@ __How to run the bot?__
 
 • Paste your token and thats it enjoy the activities.
 
+• For the configuration of the run button its `npx node .`
+
 # Packages.
 
 You need [Node.jsv16+](https://nodejs.org/en/) for running this bot.
