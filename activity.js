@@ -10,8 +10,6 @@ client.on('messageCreate', async message => { // 'message' for Discord.js v12
         if (!channel ) return message.rep
 client.discordTogether = new DiscordTogether(client);
 
-//You Can Add VC perm.
-
 
 client.discordTogether = new DiscordTogether(client);
 //Defined The Embed
