@@ -1,17 +1,19 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
-const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js')
+const { MessageEmbed, Intents, MessageActionRow, MessageButton } = require('discord.js')
+const client = new Discord.Client({
+	intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGE_REACTIONS, Intents.FLAGS.GUILD_VOICE_STATES]
+});
 const { DiscordTogether } = require('discord-together');
-
+const config = require('./config.json')
 //Command Starts
 client.on('messageCreate', async message => { // 'message' for Discord.js v12
-    if (message.content === 'activities') {
+    if (message.content === `${config.prefix || process.env.prefix}activities`) {
 	       const { channel } = message.member.voice;
         if (!channel ) return message.rep
 client.discordTogether = new DiscordTogether(client);
 
 
-client.discordTogether = new DiscordTogether(client);
+
 //Defined The Embed
 const embed = new Discord.MessageEmbed() .setColor("BLURPLE").setAuthor(message.author.tag, message.author.avatarURL()).setThumbnail(message.guild.iconURL()).setDescription(`**Current Prefix:** \`\`.\`\` \n \n> What Are Discord Activities❓ \n\n > __Discord Activities Are The Activities Developed By Discord. Some Of You Might Be Familiar With Discord Activities.__\n\n **ForExample :**\n> \`\`Youtube Together/ Discord Together\`\` Allows You To Play Youtube Videos In A Voice Channel With Your Friends`) .setFooter(`Requested by ${message.author.username}`).setTimestamp()
 //Defined The Buttons
@@ -353,4 +355,4 @@ Click the Following button to join in.
 });
 //End Of The Command.
 
-client.login('your Discord bot token');
+client.login(config.token || process.env.token);
