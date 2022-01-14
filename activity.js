@@ -8,8 +8,8 @@ const config = require('./config.json')
 //Command Starts
 client.on('messageCreate', async message => { // 'message' for Discord.js v12
     if (message.content === `${config.prefix || process.env.prefix}activities`) {
-	       const { channel } = message.member.voice;
-        if (!channel ) return message.rep
+	        const { channel } = message.member.voice;
+        if (!channel ) return message.reply({content: "You need to be in a voice channel."})
 client.discordTogether = new DiscordTogether(client);
 
 
@@ -354,5 +354,5 @@ Click the Following button to join in.
     }
 });
 //End Of The Command.
-
+console.log('Bot Is Online')
 client.login(config.token || process.env.token);
