@@ -3,6 +3,7 @@
 
 [![Version][version-shield]](version-url)
 
+
 <center><img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Active&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=gradient" /></center>
 
 # [Active](https://github.com/Hypwreck/Active/blob/main/notgovernmeadsnt.png).
