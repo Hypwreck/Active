@@ -14,7 +14,7 @@
   <h3 align="center">Active</h3>
 
   <p align="center">
-    Active is  a powerful Activity Bot
+    An Advanced Activity Bot Using [Discord-Together](https://www.npmjs.com/package/discord-together) Package For **Discord.jsv13** with buttons.
     <br />
     <br />
     <a href="https://github.com/Hypwreck/Active/issues">Report Bug</a>
@@ -22,10 +22,6 @@
     <a href="https://github.com/Hypwreck/Active/issues">Request Feature</a>
   </p>
 </p>
-
-# [Active](https://github.com/Hypwreck/Active/blob/main/notgovernmeadsnt.png).
-An Advanced Activity Bot Using [Discord-Together](https://www.npmjs.com/package/discord-together) Package For **Discord.jsv13** with buttons.
-
 
 # Usage.
 
