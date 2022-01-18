@@ -1,8 +1,8 @@
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Hypwreck/Active)
-
-
-
 <center><img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Active&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=gradient" /></center>
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Hypwreck/Active)
+[![Run on Repl.it](https://repl.it/badge/github/brblacky/lavamusic)](https://repl.it/github/Hypwreck/Active)
+[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/Hypwreck/Active)
 
 # [Active](https://github.com/Hypwreck/Active/blob/main/notgovernmeadsnt.png).
 An Advanced Activity Bot Using [Discord-Together](https://www.npmjs.com/package/discord-together) Package For **Discord.jsv13** with buttons.
