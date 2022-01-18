@@ -1,3 +1,6 @@
+
+https://i.ibb.co/9bd4cFm/notgovernmeadsnt.png
+
 # Active.
 An Advanced Activity Bot Using [Discord-Together](https://www.npmjs.com/package/discord-together) Package For **Discord.jsv13** with buttons.
 
