@@ -4,8 +4,28 @@
 [![Run on Repl.it](https://repl.it/badge/github/brblacky/lavamusic)](https://repl.it/github/Hypwreck/Active)
 [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/Hypwreck/Active)
 
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/Hypwreck/Active">
+    <img src="https://github.com/Hypwreck/Active/blob/main/notgovernmeadsnt.png" alt="Pbot-plus" width="200" height="200">
+  </a>
+
+  <h3 align="center">Active</h3>
+
+  <p align="center">
+    Active is  a powerful Activity Bot
+    <br />
+    <br />
+    <a href="https://github.com/Hypwreck/Active/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Hypwreck/Active/issues">Request Feature</a>
+  </p>
+</p>
+
 # [Active](https://github.com/Hypwreck/Active/blob/main/notgovernmeadsnt.png).
 An Advanced Activity Bot Using [Discord-Together](https://www.npmjs.com/package/discord-together) Package For **Discord.jsv13** with buttons.
+
 
 # Usage.
 
