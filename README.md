@@ -14,7 +14,7 @@
   <h3 align="center">Active</h3>
 
   <p align="center">
-    An Advanced Activity Bot Using `Discord-Together` Package For **Discord.jsv13** with buttons.
+    An Advanced Activity Bot Using Discord-Together Package For Discord.jsv13 with buttons.
     <br />
     <br />
     <a href="https://github.com/Hypwreck/Active/issues">Report Bug</a>
