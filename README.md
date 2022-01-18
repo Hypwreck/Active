@@ -1,6 +1,6 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Hypwreck/Active)
 
-[![Version][version-shield]](version-url)
+[![Version][version-shield]][version-url]
 
 <center><img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Active&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=gradient" /></center>
 
