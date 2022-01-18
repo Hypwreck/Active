@@ -50,7 +50,7 @@ You need [Node.jsv16+](https://nodejs.org/en/) for running this bot.
 {
     "token": process.env.token || "",  // your bot token You can check index.js for process.env.token
     "prefix": process.env.prefix || "/", // bot prefix  You can check index.js for process.env.prefix
-    "color": "BLURPLE" //Embed Colors
+    "colour": "BLURPLE" //Embed Colors
 }
 ```
 
