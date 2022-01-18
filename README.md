@@ -44,6 +44,16 @@ You need [Node.jsv16+](https://nodejs.org/en/) for running this bot.
 >
 > **npm i discord-together**
 
+## ⚙️ Configurations
+- edit in `config.json` and you can do in `.env` 
+```js
+{
+    "token": process.env.token || "",  // your bot token You can check index.js for process.env.token
+    "prefix": process.env.prefix || "/", // bot prefix  You can check index.js for process.env.prefix
+    "color": "BLURPLE" //Embed Colors
+}
+```
+
 # Support.
 
 > [Discord Support Server](https://discord.gg/FdAPpZXpJF)
