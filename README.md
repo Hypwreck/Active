@@ -1,4 +1,4 @@
-
+<center><img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Active&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=gradient" /></center>
 
 # [Active](https://github.com/Hypwreck/Active/blob/main/notgovernmeadsnt.png).
 An Advanced Activity Bot Using [Discord-Together](https://www.npmjs.com/package/discord-together) Package For **Discord.jsv13** with buttons.
