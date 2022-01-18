@@ -8,7 +8,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/Hypwreck/Active">
-    <img src="https://github.com/Hypwreck/Active/blob/main/notgovernmeadsnt.png" alt="Pbot-plus" width="400" height="300">
+    <img src="https://github.com/Hypwreck/Active/blob/main/notgovernmeadsnt.png" alt="Pbot-plus" width="600" height="300">
   </a>
 
   <h3 align="center">Active</h3>
