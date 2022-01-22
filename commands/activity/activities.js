@@ -34,7 +34,7 @@ const but8 = new MessageButton().setEmoji("893608366226698270").setStyle("SECOND
 
 const but9 = new MessageButton().setEmoji("893608400359919717").setStyle("SECONDARY").setCustomId("wordssnack")
 
-const but10 = new MessageButton().setEmoji("893608429195780138").setStyle("SECONDARY").setCustomId("doodlecrew")
+const but10 = new MessageButton().setEmoji("934408306401869844").setStyle("SECONDARY").setCustomId("doodlecrew")
 
 const but11 = new MessageButton().setEmoji("926790157145878559").setStyle("SECONDARY").setCustomId("spellcast")
 
