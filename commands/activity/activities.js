@@ -219,7 +219,7 @@ Click the Following button to join in.
 
               
 client.discordTogether.createTogetherCode(message.member.voice.channel.id, 'doodlecrew').then(async invite6 => {
-   const doodle = new MessageActionRow().addComponents(new MessageButton().setEmoji('893608429195780138').setStyle('LINK').setURL(invite6.code))
+   const doodle = new MessageActionRow().addComponents(new MessageButton().setEmoji('934408306401869844').setStyle('LINK').setURL(invite6.code))
               i.reply({ embeds: [doodleemb] ,components: [doodle]});
 });     
 }  else if (i.customId === "poker") {
