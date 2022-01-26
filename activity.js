@@ -3,8 +3,7 @@ const { MessageEmbed, Intents, MessageActionRow, MessageButton } = require('disc
 const client = new Discord.Client({
 	intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGE_REACTIONS, Intents.FLAGS.GUILD_VOICE_STATES]
 });
-const { DiscordTogether } = require('discord-together')
-client.discordTogether = new DiscordTogether(client);
+const { DiscordTogether } = require('discord-together');
 const config = require('./config.json')
 const express = require('express')
 const app = express()
