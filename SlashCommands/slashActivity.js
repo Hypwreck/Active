@@ -33,7 +33,7 @@ module.exports={
           description: `The channel <#${channelID}> is not a valid channel! Please use a voice channel`,
         },], ephemeral: true});
 
-        const embed = new MessageEmbed() .setColor('BLURPLE' || 'RED' || 'GREEN').setAuthor(interaction.user.tag, interaction.user.avatarURL()).setThumbnail(interaction.guild.iconURL()).setDescription(`**Memorendum** \`\`Bot for sever\`\` \n \n> What Are Discord Activities❓ \n\n > __Discord Activities Are The Activities Developed By Discord. Some Of You Might Be Familiar With Discord Activities.__\n\n **ForExample :**\n> \`\`Youtube Together/ Discord Together\`\` Allows You To Play Youtube Videos In A Voice Channel With Your Friends`) .setFooter(`Requested by ${interaction.user.username}`).setTimestamp()
+        const embed = new Discord.MessageEmbed() .setColor(config.colour).setAuthor(message.author.tag, message.author.avatarURL()).setThumbnail(message.guild.iconURL()).setDescription(`**Current Prefix:** \`\`.\`\` \n \n> What Are Discord Activities❓ \n\n > __Discord Activities Are The Activities Developed By Discord. Some Of You Might Be Familiar With Discord Activities.__\n\n **ForExample :**\n> \`\`Youtube Together/ Discord Together\`\` Allows You To Play Youtube Videos In A Voice Channel With Your Friends`) .setFooter(`Requested by ${message.author.username}`).setTimestamp()
 //Defined The Buttons
 const but1 = new MessageButton().setEmoji("926013227513544795").setStyle("SECONDARY").setCustomId("youtube")
 
