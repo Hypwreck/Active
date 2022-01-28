@@ -5,7 +5,7 @@ module.exports = async (client) => {
         try {
             const stringlength = 69;
             console.log("\n")
-            console.log(`   Make sure you join my discord`.bold.brightGreen)
+            console.log(`Discord : https://discord.gg/8XXfee8Tth`.bold.brightGreen)
             
             
         } catch {
