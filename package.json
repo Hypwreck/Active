@@ -2,7 +2,7 @@
   "name": "advanced-activity-bot-discordjsv13",
   "version": "1.0.0",
   "description": "Advanced discord activity bot discord.jsv13 ",
-  "main": "activity.js",
+  "main": "index.js",
   "dependencies": {
     "ascii-table": "0.0.9",
     "discord": "^0.8.2",
