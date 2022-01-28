@@ -56,7 +56,7 @@ You need [Node.jsv16+](https://nodejs.org/en/) for running this bot.
 
 # Support.
 
-> [Discord Support Server](https://discord.gg/FdAPpZXpJF)
+> [Discord Support Server](https://discord.gg/8XXfee8Tth)
 > 
 > [Youtube Channel](https://www.youtube.com/channel/UCxLLUfZ-CXEgsJpZOe8pSPA)
 
