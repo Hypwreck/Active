@@ -26,6 +26,7 @@ app.listen(3000)
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
+client.discordTogether = new DiscordTogether(client);  //for slash command to work
 
 
 client.queue = new Map()
