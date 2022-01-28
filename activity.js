@@ -31,7 +31,7 @@ client.discordTogether = new DiscordTogether(client);  //for slash command to wo
 
 client.queue = new Map()
 process.on('unhandledRejection', console.error);
-["command"].forEach(handler => {
+["command", "slashcommand"].forEach(handler => {
   require(`./handlers/${handler}`)(client);
 });
 client.on("messageCreate", async message => {
