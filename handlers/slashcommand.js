@@ -46,3 +46,4 @@ module.exports = async (client) => {
         // Register for all the guilds the bot is in
         // await client.application.commands.set(arrayOfSlashCommands);
     });
+}
