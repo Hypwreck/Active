@@ -45,7 +45,6 @@ app.listen(3000)
 })
 client.commands = new Discord.Collection();
 client.cooldowns = new Discord.Collection();
-client.slashCommands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.categories = require("fs").readdirSync(`./commands`);
 ["events", "commands"]
