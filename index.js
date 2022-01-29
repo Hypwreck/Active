@@ -7,12 +7,6 @@ const app = express()
 const db = require('quick.db')
 const colors = require("colors");
 const client = new Discord.Client({
-    fetchAllMembers: true,
-    shards: "auto",
-    allowedMentions: {
-      parse: [ ],
-      repliedUser: false,
-    },
     partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
     intents: [ 
         Discord.Intents.FLAGS.GUILDS,
@@ -32,33 +26,41 @@ const client = new Discord.Client({
         Discord.Intents.FLAGS.DIRECT_MESSAGE_TYPING
     ],
     presence: {
-      activity: {
-        name: `Youtube Together`, 
-        type: "LISTENING", 
-      },
       status: "online"
     }
 });
-app.listen(3000)
-    client.guilds.cache.forEach(guild => {
-  console.log(`${guild.name} | ${guild.id}`);
+
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Active is now active.')
 })
-client.commands = new Discord.Collection();
-client.cooldowns = new Discord.Collection();
-client.aliases = new Discord.Collection();
-client.categories = require("fs").readdirSync(`./commands`);
-["events", "commands"]
-    .filter(Boolean)
-    .forEach(h => {
-        require(`./handlers/${h}`)(client);
-    })
+
+app.listen(port, () => {
+  console.log(`Listenin to ${port}`)
+})
+
 client.discordTogether = new DiscordTogether(client);
+client.commands = new Discord.Collection();
+client.slash = new Discord.Collection();
+client.aliases = new Discord.Collection();
+require('discord-logs')(client);
+require('colors');
 
+["commands", "events", "slash"].forEach(handler => {
+    require(`./handlers/${handler}`)(client);
+});
 
-client.queue = new Map()
-process.on('unhandledRejection', console.error);
+process.on('unhandledRejection', (err) => {
+	console.error(`Unhandled Rejection: ${err}`);
+  });
+  
+  process.on('uncaughtException', (err) => {
+	console.error(`Uncaught Exception: ${err}`);
+  });
+  
 
-
+// Db for Prefix
 client.on("messageCreate", async message => {
  let prefix;
         try {
