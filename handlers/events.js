@@ -1,43 +1,14 @@
-const fs = require("fs");
-const allevents = [];
-module.exports = async (client) => {
-    try {
-        try {
-            const stringlength = 69;
-            console.log("\n")
-            console.log(`Discord : https://discord.gg/8XXfee8Tth`.bold.brightGreen)
-            
-            
-        } catch {
-            /* */ }
-        let amount = 0;
-        const load_dir = (dir) => {
-            const event_files = fs.readdirSync(`./events/${dir}`).filter((file) => file.endsWith(".js"));
-            for (const file of event_files) {
-                try {
-                    const event = require(`../events/${dir}/${file}`)
-                    let eventName = file.split(".")[0];
-                    allevents.push(eventName);
-                    client.on(eventName, event.bind(null, client));
-                    amount++;
-                } catch (e) {
-                    console.log(e)
-                }
-            }
-        }
-        await ["client"].forEach(e => load_dir(e));
-        console.log(`${amount} Events Loaded`.brightGreen);
-        try {
-            const stringlength2 = 69;
-            console.log("\n")
-            console.log(`     ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`.bold.yellow)
-            console.log(`     ┃ `.bold.yellow + " ".repeat(-1 + stringlength2 - ` ┃ `.length) + "┃".bold.yellow)
-            console.log(`     ┃ `.bold.yellow + `Logging into the BOT...`.bold.yellow + " ".repeat(-1 + stringlength2 - ` ┃ `.length - `Logging into the BOT...`.length) + "┃".bold.yellow)
-            console.log(`     ┃ `.bold.yellow + " ".repeat(-1 + stringlength2 - ` ┃ `.length) + "┃".bold.yellow)
-            console.log(`     ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`.bold.yellow)
-        } catch {
-            /* */ }
-    } catch (e) {
-        console.log(String(e.stack).bgRed)
+const { readdirSync } = require("fs");
+require('colors');
+module.exports = (client) => {
+  const load = dirs => {
+    const events = readdirSync(`./events/${dirs}/`).filter(d => d.endsWith("js") );
+    for (let file of events) {
+      let evt = require(`../events/${dirs}/${file}`);
+      let eName = file.split('.')[0];
+      client.on(eName, evt.bind(null,client));
+      console.log('[Events]'.yellow + ` Loaded ` + eName.green + '.');
     }
+  };
+  ["client", "guild"].forEach((x) => load(x));
 };
