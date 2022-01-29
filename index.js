@@ -34,7 +34,7 @@ const client = new Discord.Client({
     presence: {
       activity: {
         name: `Youtube Together`, 
-        type: "WATCHING", 
+        type: "LISTENING", 
       },
       status: "online"
     }
