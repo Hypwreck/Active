@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'football',
-  category: 'Games',
+  category: 'fun',
   desctiption: 'Play football with an expert GoalKeeper!',
   
 	run: async (client, message, args) => {
