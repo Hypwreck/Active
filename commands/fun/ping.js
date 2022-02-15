@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 const config = require('../../config.json');
 module.exports = {
 	name: 'ping',
-	category: 'Misc',
+	category: 'fun',
 	description: 'Returns Latency and API Ping',
 	cooldown: 10000,
 	run: async (client, message, args) => {
