@@ -47,7 +47,7 @@ client.aliases = new Discord.Collection();
 require('discord-logs')(client);
 require('colors');
 
-["commands", "events", "slash"].forEach(handler => {
+["command", "events", "slash"].forEach(handler => {
     require(`./handlers/${handler}`)(client);
 });
 
