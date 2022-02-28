@@ -15,9 +15,14 @@ const client = new Discord.Client({
       status: "online"
     }
 });
-client.on('ready', () => {
-    console.log('Bot Online');
-});
+
+/* Activity */
+let statuses = ['Youtube Together', `Prefix ${config.prefix}`];
+    setInterval(function() {
+  		let status = statuses[Math.floor(Math.random()*statuses.length)];
+  		client.user.setActivity(status, {type: "WATCHING"});
+  	}, 20000)
+// --------------
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
