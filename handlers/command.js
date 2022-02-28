@@ -1,10 +1,11 @@
+require('colors')
 const { readdirSync } = require("fs");
 
 const ascii = require("ascii-table");
 
 
-let table = new ascii("Commands");
-table.setHeading("Command", "Load status");
+let table = new ascii("Commands List".black);
+table.setHeading("Commands".red,"Status".green);
 
 module.exports = (client) => {
   
