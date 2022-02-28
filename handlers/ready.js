@@ -1,6 +1,12 @@
 require('colors')
+const express = require('express');
+const server = express();
+module.exports = (client) => {
+  
+ 
+server.all('/', (req, res)=>{
+    res.send('Active is now Active')
+})
 
-module.exports = async client => {   
-      client.user.setActivity('Youtube Together', { type: 'WATCHING' });
-      console.log(`[Discord API] Logged in as ${client.user.tag}`.magenta);
+    server.listen(3000, ()=>{console.log(`[Discord API] Logged in as Active`.magenta);});
 };
