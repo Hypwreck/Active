@@ -22,7 +22,7 @@ client.on('ready', () => {
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 
-["command"].forEach(handler => {
+["command", "ready"].forEach(handler => {
   require(`./handlers/${handler}`)(client);
 });
 client.queue = new Map()
