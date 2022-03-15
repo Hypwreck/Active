@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const { Client, Intents, Collection } = require('discord.js');
+const { Client, Intents, Collection, MessageEmbed } = require('discord.js');
 const { DiscordTogether } = require('discord-together');
 const config = require('./config.json')
 const db = require('quick.db')
@@ -47,7 +47,14 @@ client.on("messageCreate", async message => {
             } catch {
             prefix = config.prefix
     };
-
+    
+ const mention = new RegExp(`^<@!?${client.user.id}>( |)$`);
+    if (message.content.match(mention)) {
+      const embed = new MessageEmbed()
+        .setColor(config.colour)
+        .setDescription(`**› My prefix in this server is \`${prefix}\`**\n**› You can see my all commands type \`${prefix}\`help**`);
+      message.channel.send({embeds: [embed]})
+    };
 
   if (message.author.bot) return;
   if (!message.guild) return;
