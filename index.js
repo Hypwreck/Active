@@ -48,6 +48,8 @@ client.on("messageCreate", async message => {
             prefix = config.prefix
     };
     
+  if (message.author.bot) return;
+  if (!message.guild) return;
  const mention = new RegExp(`^<@!?${client.user.id}>( |)$`);
     if (message.content.match(mention)) {
       const embed = new MessageEmbed()
@@ -56,8 +58,6 @@ client.on("messageCreate", async message => {
       message.channel.send({embeds: [embed]})
     };
 
-  if (message.author.bot) return;
-  if (!message.guild) return;
   if (!message.content.startsWith(prefix)) return;
 
   if (!message.member)
