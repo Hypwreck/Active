@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const { Client, Intents, Collection, MessageEmbed } = require('discord.js');
 const { DiscordTogether } = require('discord-together');
 const config = require('./config.json');
-const config1 = require('./config1.json');
 const db = require('quick.db');
 const client = new Discord.Client({
     partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
@@ -76,4 +75,4 @@ client.on("messageCreate", async message => {
   
     if (command) command.run(client, message, args);
   });
-client.login(config1.token || process.env.token || config.token);
+client.login(process.env.token || config.token);
