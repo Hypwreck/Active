@@ -14,7 +14,7 @@ const client = new Discord.Client({
                 Intents.FLAGS.GUILD_PRESENCES
             ],
     presence: {
-      status: "idle"
+      status: "online"
     }
 });
 /* Activity */
