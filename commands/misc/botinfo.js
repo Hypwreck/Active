@@ -29,3 +29,5 @@ const row = new MessageActionRow()
     message.channel.send({embeds: [mainPage], components: [row]})
     }
 }
+
+//yo
