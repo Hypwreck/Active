@@ -46,11 +46,11 @@ module.exports = {
 
      let but3 = new MessageButton().setCustomId("fun").setEmoji("🎉").setStyle("SECONDARY");
      let but4 = new MessageButton().setCustomId("activity").setEmoji("926013227513544795").setStyle("SECONDARY"); 
-
+     let but5 = new MessageButton().setCustomId("config").setEmoji("905430191105540099").setStyle("SECONDARY"); 
      let _commands;
      let editEmbed = new MessageEmbed();
      
-    const m = await message.reply({ embeds: [embed], components: [new MessageActionRow().addComponents(but1, but2, but3, but4)]});
+    const m = await message.reply({ embeds: [embed], components: [new MessageActionRow().addComponents(but1, but2, but3, but4, but5)]});
 
     const collector = m.createMessageComponentCollector({
       filter: (b) => {
@@ -70,25 +70,32 @@ module.exports = {
        if(!b.deferred) await b.deferUpdate()
         if(b.customId === "home") {
            if(!m) return;
-          return await m.edit({ embeds: [embed], components: [new MessageActionRow().addComponents(but1.setDisabled(true), but2.setDisabled(false), but3.setDisabled(false), but4.setDisabled(false))] }) 
+          return await m.edit({ embeds: [embed], components: [new MessageActionRow().addComponents(but1.setDisabled(true), but2.setDisabled(false), but3.setDisabled(false), but4.setDisabled(false), but5.setDisabled(false))] }) 
         }
         if(b.customId === "misc") {
          _commands = client.commands.filter((x) => x.category && x.category === "misc").map((x) => `\`${x.name}\``);
              editEmbed.setColor("GREEN").setDescription(_commands.join(", ")).setTitle("Misc Commands").setFooter(`Total ${_commands.length} Misc commands.`);
            if(!m) return;
-           return await m.edit({ embeds: [editEmbed], components: [new MessageActionRow().addComponents(but1.setDisabled(false), but2.setDisabled(true), but3.setDisabled(false), but4.setDisabled(false) )] })
+           return await m.edit({ embeds: [editEmbed], components: [new MessageActionRow().addComponents(but1.setDisabled(false), but2.setDisabled(true), but3.setDisabled(false), but4.setDisabled(false), but5.setDisabled(false))] })
         }
       if(b.customId == "fun") {
          _commands = client.commands.filter((x) => x.category && x.category === "fun").map((x) => `\`${x.name}\``);
              editEmbed.setColor("PURPLE").setDescription(_commands.join(", ")).setTitle("Fun Commands").setFooter(`Total ${_commands.length} Fun commands.`)
           
-       return await m.edit({ embeds: [editEmbed], components: [new MessageActionRow().addComponents(but1.setDisabled(false), but2.setDisabled(false), but3.setDisabled(true), but4.setDisabled(false))]}) 
+       return await m.edit({ embeds: [editEmbed], components: [new MessageActionRow().addComponents(but1.setDisabled(false), but2.setDisabled(false), but3.setDisabled(true), but4.setDisabled(false), but5.setDisabled(false))]}) 
          
         } if(b.customId == "activity") {
          _commands = client.commands.filter((x) => x.category && x.category === "activity").map((x) => `\`${x.name}\``);
              editEmbed.setColor("RED").setDescription(_commands.join(", ")).setTitle("Activity Commands").setFooter(`Total ${_commands.length} Activity commands.`)
           
-       return await m.edit({ embeds: [editEmbed], components: [new MessageActionRow().addComponents(but1.setDisabled(false), but2.setDisabled(false), but3.setDisabled(false), but4.setDisabled(true))]}) 
+       return await m.edit({ embeds: [editEmbed], components: [new MessageActionRow().addComponents(but1.setDisabled(false), but2.setDisabled(false), but3.setDisabled(false), but4.setDisabled(true), but5.setDisabled(false))]}) 
+         
+        }
+        if(b.customId == "config") {
+         _commands = client.commands.filter((x) => x.category && x.category === "config").map((x) => `\`${x.name}\``);
+             editEmbed.setColor("BLURPLE").setDescription(_commands.join(", ")).setTitle("Config Commands").setFooter(`Total ${_commands.length} Config commands.`)
+          
+       return await m.edit({ embeds: [editEmbed], components: [new MessageActionRow().addComponents(but1.setDisabled(false), but2.setDisabled(false), but3.setDisabled(false), but4.setDisabled(false), but5.setDisabled(true))]}) 
          
         }
      });

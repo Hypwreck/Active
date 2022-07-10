@@ -36,7 +36,6 @@ const but = new Discord.MessageButton()
     })
   )
  
-
 const row = new Discord.MessageActionRow()
 .addComponents(but, but2, but3)
 

@@ -9,9 +9,6 @@ module.exports = {
     aliases: ["ui", "whois"],
     run: async (client, message, args) => {
 
-
-      const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
-
         const permissions = {
             "ADMINISTRATOR": "Administrator",
             "MANAGE_GUILD": "Manage Server",
@@ -55,24 +52,27 @@ module.exports = {
             "true": "Bot",
             "false": "Member"
         };
-    let user =
-      message.mentions.members.first() ||
-      message.guild.members.cache.get(args[0]) ||
-      message.member;  
+
  let link = `https://discord.com/users/${mention.user.id}`
    const row = new MessageActionRow().addComponents( new MessageButton().setEmoji("🔎").setStyle("LINK").setURL(link))
 
    const status = {
-    online: "<:9166_online:905423197531435048> Online",
-    idle: "<:9231idle:905423221006958602> Idle",
-    dnd: "<:8874_DND_Oxzy:905423207446757446> Do Not Disturb",
-    offline: "<:4624discordoffline:905423936731357204> Offline/Invisible"
-}  
+    online: "🟢 Online",
+    idle: "🟡 Idle",
+    dnd: "🔴 Do Not Disturb",
+    offline: ":black_circle: Offline/Invisible"
+};
 
-   const userlol = new Discord.MessageEmbed()
+let user =
+message.mentions.members.first() ||
+message.guild.members.cache.get(args[0]) ||
+message.member;  
+
+
+   const whois = new Discord.MessageEmbed()
         .setAuthor({ name:`User Info`, iconURL: mention.user.avatarURL()})
         .setThumbnail(usericon)
-        .addField(`General Info`, `> Name: \`${mention.user.username}\` \n> Tag: \`${mention.user.discriminator}\` \n> Nickname: \`${nick}\` \n > Status: ${status[member.presence.status]}`, true)
+        .addField(`General Info`, `> Name: \`${mention.user.username}\` \n> Tag: \`${mention.user.discriminator}\` \n> Nickname: \`${nick}\` \n > Status: ${status[mention.presence.status]}`, true)
         .addField(`Overview`, `> Badges: \`${flags[mention.user.flags.toArray().join(", ")]}\`\n> User: \`${bot[mention.user.bot]}\``)
         .addField(`Roles:`,`  <@&${mention._roles.join(">  <@&")}> `||
         "No Roles!",
@@ -82,8 +82,9 @@ module.exports = {
         .setThumbnail(mention.user.avatarURL())
         .setFooter(`ID: ${mention.user.id}`, mention.user.avatarURL())
         .setTimestamp()
-        .setColor(member.displayHexColor);
-        message.channel.send({ embeds: [userlol], components: [row] })
+        .setColor(mention.displayHexColor);
+        message.channel.send({ embeds: [whois], components: [row] })
+
     }
   
 }

@@ -66,7 +66,12 @@ client.on("messageCreate", async message => {
       .trim()
       .split(/ +/g);
     const cmd = args.shift().toLowerCase();
-  
+    let cmdx = db.get(`cmd_${message.guild.id}`)
+
+    if(cmdx) {
+      let cmdy = cmdx.find(x => x.name === cmd)
+      if(cmdy) message.channel.send({content: cmdy.responce})
+    }
     if (cmd.length === 0) return;
   
     let command = client.commands.get(cmd);

@@ -2,5 +2,6 @@
  "prefix" : "'",
  "token": "",
  "colour": "BLURPLE",
- "ownerID": "802429452897878026"
+ "ownerID": "802429452897878026",
+ "errcolor": "#FFC942"
 }
